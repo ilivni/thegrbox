@@ -1,9 +1,9 @@
-thegrbox
+###thegrbox
 ========
 
 NLP for STEM content curation.  
 
-#Solarized Light matplotlib style sheet
+###Solarized Light matplotlib style sheet
 1.  To be used for plotting in matplotlib 1.4 >
 2.  80% done see todo in file 
 3.  For instructions on how to implement see http://matplotlib.org/users/style_sheets.html
