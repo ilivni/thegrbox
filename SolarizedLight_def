@@ -1,0 +1,46 @@
+
+base1='#93a1a1'
+base2='#eee8d5'
+base3='#fdf6e3'
+base01='#586e75'
+magenta='#d33682'
+blue='#268bd2'
+cyan='#2aa198'
+violet='#6c71c4'
+green='#859900'
+red='#dc322f'
+orange='#cb4b16'
+yellow='#b58900'
+
+#wrd_df.plot(x = 'Words', y='Freq_cumPerc', legend=False)
+
+with plt.xkcd():
+    wrd_df.plot(x = 'Words', y='Freq_cumPerc', legend=False, color=blue, linewidth=2)
+    plt.title(title, color=magenta, size=14)
+    plt.xticks(rotation=45)
+    plt.rc('axes', color_cycle=['#268bd2', '#6c71c4'])
+    fig = plt.gcf()
+
+    fig.patch.set_facecolor(base3)
+
+
+    ax = plt.gca()
+
+
+    #ax.title.set_position((0,1.08))
+    ax.set_ylabel('Cumalitive Frequency (in%)')
+    ax.grid(color=base3, linestyle='-', linewidth=1)
+    ax.set_axis_bgcolor(base2) 
+    ax.xaxis.label.set_color(base01)
+    ax.yaxis.label.set_color(base01)
+    ax.tick_params(axis='x', colors=base01, direction='out')
+    ax.tick_params(axis='y', colors=base01, direction='out')
+    ax.yaxis.tick_left()
+    ax.xaxis.tick_bottom()
+    # Axes color
+    ax.spines['bottom'].set_color('#fdf6e3')
+    ax.spines['top'].set_color('#fdf6e3')
+    ax.spines['left'].set_color('#fdf6e3')
+    ax.spines['right'].set_color('#fdf6e3')
+    ax.grid(False)
+    #mpl.to_bokeh(plt.gcf(), xkcd=True)
